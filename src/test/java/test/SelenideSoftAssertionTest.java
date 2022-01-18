@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class SelenideSoftAssertionTest {
@@ -18,6 +19,6 @@ public class SelenideSoftAssertionTest {
         //кликнуть по Soft assertions
         $(new ByText("Soft assertions")).should(visible).click();
         //проверить наличие блока Junit5
-        $(new ByText("Using JUnit5 extend test class:")).scrollTo().should(visible);
+        $(byText("Using JUnit5 extend test class:")).scrollTo().should(visible);
     }
 }

@@ -3,6 +3,7 @@ package test;
 import com.codeborne.selenide.Condition;
 import org.junit.jupiter.api.Test;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
 public class DragAnDropTest {
@@ -11,7 +12,7 @@ public class DragAnDropTest {
     void firstDragAndropTest(){
         open("https://the-internet.herokuapp.com/drag_and_drop");
         $("#column-a").dragAndDropTo("#column-b");
-        $("#column-a").should(Condition.text("B"));
-        sleep(5000);
+        $("#column-a").should(text("B"));
+        $("#column-b").should(text("A"));
     }
 }
