@@ -17,7 +17,7 @@ public class SelenideSoftAssertionTest {
         // открыть вкладку Wiki
         $("#wiki-tab").click();
         //кликнуть по Soft assertions
-        $(new ByText("Soft assertions")).should(visible).click();
+        $(byText("Soft assertions")).should(visible).click();
         //проверить наличие блока Junit5
         $(byText("Using JUnit5 extend test class:")).scrollTo().should(visible);
     }
